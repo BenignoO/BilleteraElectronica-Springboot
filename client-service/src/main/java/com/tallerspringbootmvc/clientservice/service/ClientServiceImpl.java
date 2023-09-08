@@ -20,7 +20,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public ClientResponseDTO createClient(ClientRequestDTO requestDTO) {
         if (Objects.isNull(requestDTO))
-            throw new RuntimeException("La request no puede contener un objeto vacío.");
+            throw new RuntimeException("El Cliente no puede ser nulo.");
 
         ClientEntity client = clientMapper.toEntity(requestDTO);
         client = clientRepository.save(client);
