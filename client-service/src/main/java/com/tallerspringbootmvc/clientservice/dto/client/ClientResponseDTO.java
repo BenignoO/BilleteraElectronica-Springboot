@@ -1,4 +1,4 @@
-package com.tallerspringbootmvc.clientservice.dto;
+package com.tallerspringbootmvc.clientservice.dto.client;
 
 import lombok.Builder;
 

@@ -1,7 +1,7 @@
 package com.tallerspringbootmvc.clientservice.service;
 
-import com.tallerspringbootmvc.clientservice.dto.ClientRequestDTO;
-import com.tallerspringbootmvc.clientservice.dto.ClientResponseDTO;
+import com.tallerspringbootmvc.clientservice.dto.client.ClientRequestDTO;
+import com.tallerspringbootmvc.clientservice.dto.client.ClientResponseDTO;
 import com.tallerspringbootmvc.clientservice.model.ClientEntity;
 import com.tallerspringbootmvc.clientservice.model.mapper.ClientMapper;
 import com.tallerspringbootmvc.clientservice.repository.ClientRepository;

@@ -1,7 +1,7 @@
 package com.tallerspringbootmvc.clientservice.controller;
 
 import com.tallerspringbootmvc.clientservice.constants.ClientConstants;
-import com.tallerspringbootmvc.clientservice.dto.ClientRequestDTO;
+import com.tallerspringbootmvc.clientservice.dto.client.ClientRequestDTO;
 import com.tallerspringbootmvc.clientservice.service.ClientService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ public class ClientController {
 
     @PostMapping
     public ResponseEntity<Void> createClient(@Valid @RequestBody ClientRequestDTO requestDTO) {
-        //clientService.createClient(requestDTO);
+        clientService.createClient(requestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
