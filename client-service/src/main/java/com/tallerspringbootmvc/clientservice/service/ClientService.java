@@ -5,5 +5,5 @@ import com.tallerspringbootmvc.clientservice.dto.client.ClientResponseDTO;
 
 public interface ClientService {
 
-    ClientResponseDTO createClient(ClientRequestDTO requestDTO);
+    void createClient(ClientRequestDTO requestDTO);
 }
