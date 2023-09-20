@@ -1,8 +1,12 @@
 package com.tallerspringbootmvc.clientservice.utils;
 
 import com.tallerspringbootmvc.clientservice.dto.wallet.WalletRequestDTO;
+import com.tallerspringbootmvc.clientservice.dto.wallet.WalletResponseDTO;
 import jakarta.validation.Valid;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -12,6 +16,6 @@ public interface WalletAPIClient {
     @PostMapping
     void createWallet(@Valid @RequestBody WalletRequestDTO requestDTO);
 
-//    @GetMapping(value = "/{clientDocumentNumber}")
-//    ResponseEntity<WalletResponseDTO> getBalance(@PathVariable String clientDocumentNumber);
+    @GetMapping(value = "/{clientDocumentNumber}")
+    ResponseEntity<WalletResponseDTO> getBalance(@PathVariable String clientDocumentNumber);
 }

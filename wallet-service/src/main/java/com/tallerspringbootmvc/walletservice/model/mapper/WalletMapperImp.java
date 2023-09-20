@@ -20,11 +20,11 @@ public class WalletMapperImp  implements WalletMapper{
                 .build();
     }
 
-    @Override
-    public WalletEntity toEntity(WalletRequestDTO requestDTO) {
-
-        return WalletEntity.builder()
-                .clientDocumentNumber(requestDTO.clientDocumentNumber())
-                .build();
-    }
+//    @Override
+//    public WalletEntity toEntity(WalletRequestDTO requestDTO) {
+//
+//        return WalletEntity.builder()
+//                .clientDocumentNumber(requestDTO.clientDocumentNumber())
+//                .build();
+//    }
 }

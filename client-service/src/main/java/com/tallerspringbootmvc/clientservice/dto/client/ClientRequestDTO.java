@@ -5,7 +5,7 @@ import lombok.Builder;
 
 @Builder
 public record ClientRequestDTO(
-        @NotEmpty @NotBlank String documentNumber,
+        @Pattern(regexp = "[0-9]{8}") @NotEmpty @NotBlank String documentNumber,
         @NotEmpty @NotBlank String phoneNumber,
         @Email String email
 ) {

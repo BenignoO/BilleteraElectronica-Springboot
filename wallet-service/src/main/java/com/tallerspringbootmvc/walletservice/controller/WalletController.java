@@ -2,15 +2,13 @@ package com.tallerspringbootmvc.walletservice.controller;
 
 import com.tallerspringbootmvc.walletservice.constants.WalletConstants;
 import com.tallerspringbootmvc.walletservice.dto.WalletRequestDTO;
+import com.tallerspringbootmvc.walletservice.dto.WalletResponseDTO;
 import com.tallerspringbootmvc.walletservice.service.WalletService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = WalletConstants.BASE_URI)
@@ -25,9 +23,9 @@ public class WalletController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-//    @GetMapping(value = "/{clientDocumentNumber}")
-//    public ResponseEntity<WalletResponseDTO> getBalance(@PathVariable String clientDocumentNumber) {
-//        WalletResponseDTO responseDTO = walletService.getBalance(clientDocumentNumber);
-//        return ResponseEntity.status(HttpStatus.OK).body(responseDTO);
-//    }
+    @GetMapping(value = "/{clientDocumentNumber}")
+    public ResponseEntity<WalletResponseDTO> getBalance(@PathVariable String clientDocumentNumber) {
+        WalletResponseDTO responseDTO = walletService.getBalance(clientDocumentNumber);
+        return ResponseEntity.status(HttpStatus.OK).body(responseDTO);
+    }
 }

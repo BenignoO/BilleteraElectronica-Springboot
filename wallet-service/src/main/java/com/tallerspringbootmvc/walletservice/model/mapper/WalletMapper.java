@@ -8,5 +8,5 @@ import jakarta.validation.constraints.NotNull;
 public interface WalletMapper {
     WalletResponseDTO toDTO(@NotNull WalletEntity entity);
 
-    WalletEntity toEntity(@NotNull WalletRequestDTO requestDTO);
+    //WalletEntity toEntity(@NotNull WalletRequestDTO requestDTO);
 }

@@ -36,6 +36,7 @@ public class WalletServiceImpl implements WalletService{
 
     @Override
     public WalletResponseDTO getBalance(String clientDocumentNumber) {
+        log.info("walletservice getBalance");
         if (clientDocumentNumber.trim().isEmpty())
             throw new RuntimeException("Número de documento del cliente inválido.");
 
